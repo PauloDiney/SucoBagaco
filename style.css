@@ -119,6 +119,8 @@ html {
 
 .item.active h1{
     z-index: 2;
+    letter-spacing: 5px;
+    font-weight: bold;
     animation: toActive 1s ease-in-out 1;
 }
 
