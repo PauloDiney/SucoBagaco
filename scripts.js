@@ -24,3 +24,20 @@ prev.onclick = () => {
     active = active <= 0 ? cout - 1 : active - 1;
     list[active].classList.add('active');
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.carrosel-item');
+    let currentIndex = 0;
+
+    function showNextItem() {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].classList.add('active');
+    }
+
+    items[currentIndex].classList.add('active');
+    setInterval(showNextItem, 3000); // Muda de item a cada 3 segundos
+});
+
+
